@@ -1,0 +1,8 @@
+prefix=/home/starsky/stealingfire/ws/wiredbot/src/i2c_pca9685_driver/cmake-build-debug/devel
+
+Name: i2c_pca9685_driver
+Description: Description of i2c_pca9685_driver
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/starsky/stealingfire/ws/wiredbot/src/i2c_pca9685_driver/cmake-build-debug/devel/lib 
+Requires: 

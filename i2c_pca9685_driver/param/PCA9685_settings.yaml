@@ -1,0 +1,6 @@
+# default parameters for the PCA9685 settings -   PCA9685: 2ms/20ms * 4096
+
+ADDRESS: 0x40
+BUS_Tk1_DEFAULT: 1
+BUS_TX2_DEFAULT: 1
+BUS_RASPBERRY_DEFAULT : 0

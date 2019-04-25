@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: i2c_pca9685_driver
+Description: Description of i2c_pca9685_driver
+Version: 0.0.0
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib -li2c_pca9685_driver
+Requires: nodelet roscpp std_msgs message_runtime

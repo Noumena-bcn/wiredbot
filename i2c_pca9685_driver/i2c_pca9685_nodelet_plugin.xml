@@ -1,0 +1,7 @@
+<!--the path is : *_driver_nodelet at the cmakeList.txt, on the plugin: lib*_driver_nodelet-->
+<library path="lib/lib_i2c_pca9685_driver_nodelet">
+    <class name="i2c_pca9685_driver/i2c_pca9685_driver_nodelet"
+           type="i2c_pca9685_driver::PCA9685_driver_nodelet" base_class_type="nodelet::Nodelet">
+        <description>i2c_pca9685_driver::PCA9685_driver interface nodelet.</description>
+    </class>
+</library>

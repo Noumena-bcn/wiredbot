@@ -1,0 +1,14 @@
+<launch>
+    <arg name="namespace" default="wiredbot" />
+    <arg name="rosparam_x8receiver" default="$(find wiredbot_teleop)/param/x8receiver_settings.yaml" />
+
+    <group ns="$(arg namespace)">
+        <include file="$(find rosserial_arduino)/launch/serial_node.launch">
+        </include>
+        <include file="$(find wiredbot_driver)/launch/motor_drive_node.launch">
+        </include>
+        <node pkg="wiredbot_teleop" name="wiredbot_teleop_x8r" type="wiredbot_teleop_x8r_node.py" output="screen">
+            <rosparam command="load" file="$(arg rosparam_x8receiver)" />
+        </node>
+    </group>
+</launch>

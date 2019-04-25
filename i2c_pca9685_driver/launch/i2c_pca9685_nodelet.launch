@@ -1,0 +1,18 @@
+<launch>
+    <arg name="rosparam_sabertooth" default="$(find i2c_pca9685_driver)/param/sabertooth2X60_settings.yaml" />
+    <arg name="rosparam_PCA9685" default="$(find i2c_pca9685_driver)/param/PCA9685_settings.yaml" />
+
+    <node pkg="i2c_pca9685_driver" type="i2c_pca9685_driver_node" name="i2c_pca9685_driver_node" output="screen">
+        <param name="set_logger_level_debug" value="true" />
+        <!--I2C INTERFACE-->
+        <rosparam command="load" file="$(arg rosparam_PCA9685)" />
+        <!--ROBOT TYPE-->
+        <param name="robot_type" value="WIREDBOT" />
+        <!--        <param name="device" value="RASPBERRY_MODEL_3" />-->
+        <param name="device" value="JETSON_TX2" />
+        <!--MOTOR DRIVERS-->
+        <!--        <param name="motor_driver" value="BTS7960B" />-->
+        <param name="motor_driver" value="SABERTOOTH_2X60" />
+        <rosparam command="load" file="$(arg rosparam_sabertooth)" />
+    </node>
+</launch>
